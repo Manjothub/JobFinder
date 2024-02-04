@@ -17,4 +17,7 @@ use App\Http\Controllers\Home\HomeController;
 Route::get('', [HomeController::class, 'index'])->name('index');
 Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('login', [HomeController::class, 'login'])->name('login');
+Route::get('register', [HomeController::class, 'register'])->name('register');
+Route::post('saveuser', [HomeController::class, 'saveuser'])->name('saveuser');
 
