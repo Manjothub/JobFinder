@@ -11,14 +11,15 @@
     <div class="container">
       <div class="wrapper">
         <div class="title"><span>Login Here</span></div>
-        <form action="#">
+        <form action="{{ route ('dologin') }}" method="POST">
+          @csrf
           <div class="row">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Email or Phone" required>
+            <input type="text" name = "email" placeholder="Email or Phone" required>
           </div>
           <div class="row">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" required>
+            <input type="password" name = "password" placeholder="Password" required>
           </div>
           <div class="pass"><a href="#">Forgot password?</a></div>
           <div class="row button">
@@ -28,6 +29,5 @@
         </form>
       </div>
     </div>
-
   </body>
 </html>

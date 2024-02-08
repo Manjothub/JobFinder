@@ -12,6 +12,7 @@
       <div class="wrapper">
         <div class="title"><span>Register Here</span></div>
         <form method = "POST" action="{{route ('saveuser')}}">
+          @csrf
           <div class="row">
             <i class="fas fa-envelope"></i>
             <input type="text" name = "email" placeholder="Email Address" required>
