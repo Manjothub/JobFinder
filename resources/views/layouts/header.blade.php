@@ -33,9 +33,14 @@
                             </div>          
                             <!-- Header-btn -->
                             <div class="header-btn d-none f-right d-lg-block">
-                                <a href="{{ route ('register') }}" class="btn head-btn1">Register</a>
-                                <a href="{{ route ('login') }}" class="btn head-btn2">Login</a>
-                            </div>  
+                            @if (auth()->check())
+                            <a href="{{ route ('profile') }}" class="btn head-btn1">Profile</a>
+                            <a href="{{ route ('logout') }}" class="btn head-btn2">Logout</a>
+                            @else
+                            <a href="{{ route ('register') }}" class="btn head-btn1">Register</a>
+                            <a href="{{ route ('login') }}" class="btn head-btn2">Login</a>
+                        </div>  
+                            @endif
                         </div>
                     </div>
                     <!-- Mobile Menu -->

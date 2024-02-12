@@ -21,4 +21,6 @@ Route::get('login', [HomeController::class, 'login'])->name('login');
 Route::post('dologin', [HomeController::class, 'dologin'])->name('dologin');
 Route::get('register', [HomeController::class, 'register'])->name('register');
 Route::post('saveuser', [HomeController::class, 'saveuser'])->name('saveuser');
+Route::get('profile', [HomeController::class, 'profile'])->name('profile');
+Route::get('logout', [HomeController::class, 'logout'])->name('logout');
 

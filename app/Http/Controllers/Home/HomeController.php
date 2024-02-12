@@ -61,4 +61,15 @@ class HomeController extends Controller
         }
     }
 
+    public function profile(){
+        $title = "Profile";
+        return view('home.profile',compact('title'));
+    }
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->to(' ');
+    }
+
 }
