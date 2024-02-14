@@ -31,13 +31,6 @@ class HomeController extends Controller
     }    
 
     public function saveuser(Request $request){
-        // // Validate the input data
-        $request->validate([
-            'phone' => 'required|number|max:10',
-            'email' => 'required|string|email|max:250|unique:users',
-            'password' => 'required|string|min:8|same:password',
-        ]);
-
         $email = $request->input('email');
         $password = $request->input('password');
 
